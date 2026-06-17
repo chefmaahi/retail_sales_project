@@ -1,4 +1,14 @@
-# 🛒 Retail Sales Analytics — End-to-End Data Project
+## 📊 Live Tableau Dashboard
+🔗 [Real-time Sales Performance Analytics Dashboard](https://public.tableau.com/app/profile/mahadev.kishan.gurram/viz/Realtimesalesperformanceanalyticsdashboard/Real-TimeSalesPerformanceAnalyticsDashboard?publish=yes
+
+<<<<<<< HEAD
+# 🛒 Real-Time Sales Performance Analytics Dashboard for Retail Businesses
+MCA Major Project — Chandigarh University
+
+Student: GURRAM MAHADEV KISHAN
+UID: CUOL725165
+Course: 23ONMCR-753 — Major Project
+Supervisor: Mr. Anurag Goel 
 
 A complete retail sales analytics pipeline covering relational database
 design, ETL processing, KPI analytics, sales forecasting, and Tableau
@@ -179,3 +189,7 @@ See the **GitHub Guide** section below.
 ## License
 
 MIT
+=======
+# retail_sales_project
+Real-Time Sales Performance Analytics Dashboard for Retail Businesses — MCA Major Project, Chandigarh University
+>>>>>>> b30f81b26f0478203cafd686caf3e2727af46bb0
