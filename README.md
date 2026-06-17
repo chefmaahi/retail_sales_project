@@ -179,8 +179,3 @@ correctness, forecast sanity, and Tableau export completeness.
 - **unittest** — Test framework
 
 ---
-
-=======
-# retail_sales_project
-Real-Time Sales Performance Analytics Dashboard for Retail Businesses — MCA Major Project, Chandigarh University
->>>>>>> b30f81b26f0478203cafd686caf3e2727af46bb0
