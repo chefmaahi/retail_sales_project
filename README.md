@@ -178,4 +178,8 @@ correctness, forecast sanity, and Tableau export completeness.
 - **Tableau** — Dashboard visualization
 - **unittest** — Test framework
 
+<<<<<<< Updated upstream
 ---
+=======
+---
+>>>>>>> Stashed changes
