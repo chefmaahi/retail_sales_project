@@ -1,20 +1,27 @@
 # Tableau Dashboard Documentation
 
 ## 🔗 Live Link
-https://public.tableau.com/app/profile/mahadev.kishan.gurram/viz/Realtimesalesperformanceanalyticsdashboard/Dashboard1?publish=yes
+https://public.tableau.com/app/profile/mahadev.kishan.gurram/viz/Realtimesalesperformanceanalyticsdashboard/Real-TimeSalesPerformanceAnalyticsDashboard?publish=yes
 
 ## 📊 Sheets Built
 
 | Sheet | Data Source | Chart Type | KPI Shown |
 |-------|------------|------------|-----------|
-| Revenue Trend | 01_sales_transactions | Line | Monthly Revenue |
+| Monthly Sales Revenue | 01_sales_transactions | Line | Monthly Revenue |
 | Revenue by Category | 01_sales_transactions | Bar | Revenue per Category |
-| Profit Margin KPI | 01_sales_transactions | Scorecard | 30% Margin |
 | Conversion Rate by Category | 03_category_performance | Bar | % share per category |
 | Conversion Rate by Age Group | 04_customer_demographics | Bar | % share per age group |
-| Monthly KPIs | 02_monthly_kpis | Line/Dual Axis | Revenue + Profit |
+| Total Amount Spent by Gender | 04_customer_demographics | Pie | Total Amount Spent by Gender |
+| Total Revenue & Profit Analysis | 02_monthly_kpis | Line/Dual Axis | Revenue + Profit |
 | Seasonality Heatmap | 06_seasonality_heatmap | Heatmap | Revenue by Month × Category |
 | Forecast | 05_forecasts | Line | 6-month prediction |
+| Total Revenue | 01_sales_transactions | KPI | $456,000
+| Total Profit | 01_sales_transactions | KPI | $136,800
+| Profit Margin | 01_sales_transactions | KPI | 30.0%
+| Total Units Sold | 01_sales_transactions | KPI | 2,514
+| AVG Order Value | 02_monthly_kpis | KPI | $476.69
+| Conversion Rate | 03_category_performance  | KPI | 100%
+| Profit margin | 01_sales_transactions | Scorecard | 30% Margin |
 
 ## 📐 Calculated Fields Used
 
