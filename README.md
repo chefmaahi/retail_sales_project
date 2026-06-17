@@ -1,7 +1,7 @@
 ## 📊 Live Tableau Dashboard
 🔗 [Real-time Sales Performance Analytics Dashboard](https://public.tableau.com/app/profile/mahadev.kishan.gurram/viz/Realtimesalesperformanceanalyticsdashboard/Real-TimeSalesPerformanceAnalyticsDashboard?publish=yes
 
-<<<<<<< HEAD
+
 # 🛒 Real-Time Sales Performance Analytics Dashboard for Retail Businesses
 MCA Major Project — Chandigarh University
 
