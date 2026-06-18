@@ -14,6 +14,10 @@ design, ETL processing, KPI analytics, sales forecasting, and Tableau
 dashboard preparation.
 
 ---
+## DATASET TAKEN FROM - KAGGLE [ retail_sales_dataset.csv ]
+( https://www.kaggle.com/datasets/josemiguelterron/retail-sales-data-dashboard
+
+---
 
 ## 📁 Project Structure
 
