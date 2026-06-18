@@ -1,4 +1,13 @@
-# 🛒 Retail Sales Analytics — End-to-End Data Project
+## 📊 Live Tableau Dashboard
+🔗 [Real-time Sales Performance Analytics Dashboard](https://public.tableau.com/app/profile/mahadev.kishan.gurram/viz/Realtimesalesperformanceanalyticsdashboardforretailbusiness/Real-TimeSalesPerformanceAnalyticsDashboard?publish=yes
+
+# 🛒 Real-Time Sales Performance Analytics Dashboard for Retail Businesses
+MCA Major Project — Chandigarh University
+
+Student: GURRAM MAHADEV KISHAN
+UID: CUOL725165
+Course: 23ONMCR-753 — Major Project
+Supervisor: Mr. Anurag Goel 
 
 A complete retail sales analytics pipeline covering relational database
 design, ETL processing, KPI analytics, sales forecasting, and Tableau
@@ -37,6 +46,9 @@ retail_sales_project/
 │   └── 04_customer_demographics.csv    ← (auto-generated)
 │   └── 05_forecasts.csv                ← (auto-generated)
 │   └── 06_seasonality_heatmap.csv      ← (auto-generated)
+│   └── 07_region_performance.csv       ← (auto-generated)
+│   └── 08_region_category.csv          ← (auto-generated)
+│   └── 09_statistical_analysis.csv     ← (auto-generated)
 ├── tests/
 │   └── test_project.py                 ← 19 unit tests (ETL, KPI, Forecast, Tableau)
 ├── reports/
@@ -50,7 +62,7 @@ retail_sales_project/
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/retail-sales-analytics.git
+git clone https://github.com/chefmaahi/retail-sales-analytics.git
 cd retail-sales-analytics
 
 # 2. Install dependencies
@@ -111,11 +123,12 @@ dim_customers ─────┤──► fact_sales ◄── dim_products
 
 See `tableau/TABLEAU_GUIDE.md` for step-by-step build instructions.
 
-4 dashboards:
-1. **Executive KPI Overview** — Scorecards, revenue trend, category bars
-2. **Trends & Seasonality** — MoM chart, heatmap, weekend analysis
-3. **Customer Insights** — Gender, age group, RFM scatter
-4. **Forecasting** — Historical vs predicted, model comparison
+ **Real-Time Sales Performance Analytics Dashboard for Retail Businesses:**
+1. **Executive KPI Overview** — Total Revenue, Total Profit, Profit Margin, AVG Order value, Conversion Rate, Total Units Sold.
+2. **Revenue by Product Category** — heatmap and Horizental bar chart.
+3. **Customer Insights by Gender and Age Group** — Spending Analysis by Age Group and Gender, Total Amount Spent by Gender, Conversion Rate by Age Group.
+4. **Forecasting** —  predicted Revenue for next 6 months with upper CI and Lower CI.
+5. **Region** - Revenue by Region, Region by Category , Seasonality by Region
 
 ---
 
@@ -145,6 +158,7 @@ correctness, forecast sanity, and Tableau export completeness.
 | Quantity | Units purchased (1–4) |
 | Price per Unit | Unit price ($25–$500) |
 | Total Amount | quantity × price |
+| Region | Andhra pradesh / Karnataka / Goa |
 
 ---
 
@@ -170,12 +184,3 @@ correctness, forecast sanity, and Tableau export completeness.
 
 ---
 
-## 📤 Push to GitHub (Step-by-Step)
-
-See the **GitHub Guide** section below.
-
----
-
-## License
-
-MIT
