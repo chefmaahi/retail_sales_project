@@ -219,3 +219,58 @@ if __name__ == "__main__":
     runner = unittest.TextTestRunner(verbosity=2)
     result = runner.run(suite)
     sys.exit(0 if result.wasSuccessful() else 1)
+
+
+class TestRegionFeature(unittest.TestCase):
+    """Validate region data and exports."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.conn = sqlite3.connect(DB_PATH)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.conn.close()
+
+    def test_three_regions_exist(self):
+        regions = {r[0] for r in
+                   self.conn.execute("SELECT region_name FROM dim_region")}
+        self.assertEqual(regions, {"Andhra Pradesh", "Karnataka", "Goa"})
+
+    def test_all_transactions_have_region(self):
+        nulls = self.conn.execute(
+            "SELECT COUNT(*) FROM fact_sales WHERE region_id IS NULL"
+        ).fetchone()[0]
+        self.assertEqual(nulls, 0)
+
+    def test_region_revenue_sums_match(self):
+        region_total = self.conn.execute(
+            "SELECT SUM(revenue) FROM agg_region_performance").fetchone()[0]
+        fact_total   = self.conn.execute(
+            "SELECT SUM(total_amount) FROM fact_sales").fetchone()[0]
+        self.assertAlmostEqual(region_total, fact_total, places=1)
+
+    def test_region_csv_files_exist(self):
+        TABLEAU_DIR = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tableau")
+        for fname in ["07_region_performance.csv",
+                      "08_region_category.csv",
+                      "09_statistical_analysis.csv"]:
+            self.assertTrue(os.path.exists(os.path.join(TABLEAU_DIR, fname)),
+                            f"Missing: {fname}")
+
+    def test_region_column_in_transactions_csv(self):
+        TABLEAU_DIR = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tableau")
+        df = pd.read_csv(os.path.join(TABLEAU_DIR, "01_sales_transactions.csv"))
+        self.assertIn("region", df.columns)
+        self.assertEqual(set(df["region"].unique()),
+                         {"Andhra Pradesh", "Karnataka", "Goa"})
+
+    def test_statistical_analysis_has_seasonal_index(self):
+        TABLEAU_DIR = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tableau")
+        df = pd.read_csv(os.path.join(TABLEAU_DIR, "09_statistical_analysis.csv"))
+        self.assertIn("seasonal_index", df.columns)
+        self.assertIn("trend", df.columns)
+        self.assertTrue((df["seasonal_index"] > 0).all())

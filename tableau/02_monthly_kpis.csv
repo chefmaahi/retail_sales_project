@@ -1,4 +1,4 @@
-year_month,total_revenue,total_orders,avg_order_value,unique_customers,total_quantity,profit,profit_margin_pct
+year_month,total_revenue,total_orders,avg_order_value,unique_customers,total_quantity,total_profit,profit_margin_pct
 2023-01,35450,76,466.44736842105266,76,195,10635.0,30.0
 2023-02,44060,85,518.3529411764706,85,214,13218.0,30.0
 2023-03,28990,73,397.1232876712329,73,194,8697.0,30.0
