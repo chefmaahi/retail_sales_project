@@ -74,6 +74,20 @@ with slight emphasis on female-oriented products.
 | November | $34,920 | 78 | ▼ -25.0% |
 | December | $44,690 | 91 | ▲ +28.0% |
 
+### Region by Category Breakdown
+
+| Region | Category | Revenue | Orders | Avg Order Value |
+|--------|----------|---------|--------|------------------|
+| Andhra Pradesh | Electronics | $73,345 | 148 | $495.57 |
+| Andhra Pradesh | Beauty | $62,730 | 135 | $464.67 |
+| Andhra Pradesh | Clothing | $60,635 | 138 | $439.38 |
+| Karnataka | Clothing | $54,430 | 128 | $425.23 |
+| Karnataka | Beauty | $47,570 | 101 | $470.99 |
+| Karnataka | Electronics | $45,220 | 107 | $422.62 |
+| Goa | Clothing | $40,515 | 85 | $476.65 |
+| Goa | Electronics | $38,340 | 87 | $440.69 |
+| Goa | Beauty | $33,215 | 71 | $467.82 |
+
 **Key Findings:**
 - **Peak month:** May ($53,150) — likely driven by spring/summer launches
 - **Trough month:** September ($23,620) — post-summer slowdown
@@ -158,11 +172,11 @@ dominating given the average age of 41.
 
 ## Dashboard Summary (Tableau)
 
-Four dashboards are configured:
-1. **Executive KPI Overview** — Revenue scorecards + category bars + trend line
-2. **Trends & Seasonality** — MoM chart + heatmap + day-of-week analysis
-3. **Customer Insights** — Gender donut + age group bars + RFM scatter
-4. **Forecasting** — Historical vs predicted line + model comparison + CI band
+1. **Executive KPI Overview** — Total Revenue, Total Profit, Profit Margin, AVG Order value, Conversion Rate, Total Units Sold.
+2. **Revenue by Product Category** — heatmap and Horizental bar chart.
+3. **Customer Insights by Gender and Age Group** — Spending Analysis by Age Group and Gender, Total Amount Spent by Gender, Conversion Rate by Age Group.
+4. **Forecasting** —  predicted Revenue for next 6 months with upper CI and Lower CI.
+
 
 All dashboards support filtering by: **Year | Quarter | Month | Product Category | Gender | Age Group**
 
