@@ -19,10 +19,29 @@ dashboard preparation.
 
 ---
 
+## ✨ Features
+
+- Automated ETL pipeline using Python
+- SQLite Data Warehouse (Star Schema)
+- Data Cleaning & Transformation
+- KPI Analytics using SQL
+- Sales Forecasting (4 Models)
+- Tableau Dashboard Data Export
+- Region-wise Performance Analytics
+- Statistical Trend Analysis
+- Automated Unit Testing (Pytest)
+- GitHub Actions CI Pipeline
+- Artifact Upload for Tableau CSVs
+
+---
+
 ## 📁 Project Structure
 
 ```
 retail_sales_project/
+.github/
+└── workflows/
+│   └── etl_pipeline.yml           ← GitHub Actions CI workflow
 ├── main.py                        ← Run everything with one command
 ├── requirements.txt
 ├── data/
@@ -144,7 +163,7 @@ python3 -m pytest tests/ -v
 python3 tests/test_project.py
 ```
 
-19 tests covering: ETL data quality, referential integrity, KPI
+25 tests covering: ETL data quality, referential integrity, KPI
 correctness, forecast sanity, and Tableau export completeness.
 
 ---
@@ -187,4 +206,10 @@ correctness, forecast sanity, and Tableau export completeness.
 - **unittest** — Test framework
 
 ---
+
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![SQLite](https://img.shields.io/badge/Database-SQLite-green)
+![Tableau](https://img.shields.io/badge/Tableau-Dashboard-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![GitHub Actions](https://img.shields.io/badge/CI-GitHub%20Actions-success)
 
