@@ -1,0 +1,40 @@
+name: Retail Sales ETL Pipeline
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/raw/**'
+      - 'main.py'
+      - 'etl/**'
+      - 'analytics/**'
+      - 'forecasting/**'
+      - 'requirements.txt'
+jobs:
+  run-etl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run full pipeline
+        run: python main.py
+
+      - name: Upload Tableau CSVs
+        uses: actions/upload-artifact@v4
+        with:
+          name: tableau-data-sources
+          path: tableau/*.csv
+          retention-days: 14
+          if-no-files-found: warn
